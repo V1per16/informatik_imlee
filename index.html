@@ -1,0 +1,151 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Informatik teacher</title>
+        <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <div class="main-nav-list">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="">Contact</a></li>
+                    <li><a href="">Projects</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="left-side">
+            <nav>
+                <ul class="side-nav-list">
+                    <li><a href="">Overall coding environments</a></li>
+
+                    <li><a href="" class="expandable">Introduction to python</a>
+                        <ul>
+                            <li><a href="">setup coding environment</a></li>
+                            <li><a href="">print command</a></li>
+                            <li><a href="">variables</a></li>
+                            <li><a href="">user inputs</a></li>
+                            <li><a href="">if - else conditions</a></li>
+                            <li><a href="">while loops</a></li>
+                            <li><a href="">for loops</a></li>
+                            <li><a href="">definitions</a></li>
+                            <li><a href="">classes</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="" class="expandable">Introduction to HTML</a>
+                        <ul>
+                            <li><a href="">basic code structure</a></li>
+                            <li><a href="">navigation</a></li>
+                            <li><a href="">hyperlinks</a></li>
+                            <li><a href="">lists</a></li>
+                            <li><a href="">buttons</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="" class="expandable">Introduction to CSS</a>
+                        <ul>
+                            <li><a href="">basic code structure</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <button class="hamburger" id="hamburger">☰</button>
+
+        <main class="content">
+            <section class="hero">
+                <h1>Welcome to <span class="content-site-title">IT Helfer Im Lee</span></h1>
+                <p>Lerne Coding mit Modulen Schritt-für-Schritt</p>
+
+                <div class="stats">
+                    <div class="stat">
+                        <strong>3</strong> Kurse
+                    </div>
+                    
+                    <div class="stat">
+                        <strong>21</strong> Module
+                    </div>
+
+                    <div class="stat">
+                        <strong>100%</strong> für Anfänger
+                    </div>
+                </div>
+            </section>
+
+            <section class="course-overview">
+                <div class="courses">
+                    <div class="course">
+                        <div class="course-title">Python</div>
+                        <h3>Einführung zu Python</h3>
+                        <p>Lerne die Basics der Programmiersprache Python</p>
+                    </div>
+
+                    <div class="course">
+                        <div class="course-title">HTML</div>
+                        <h3>Einführung zu HTML</h3>
+                        <p>Lerne die Basics der Webseitensprache HTML</p>
+                    </div>
+
+                    <div class="course">
+                        <div class="course-title">CSS</div>
+                        <h3>Einführung zu CSS</h3>
+                        <p>Lerne die Basics der Webdesignsprache CSS</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="quick-links">
+                <h2>Hilfreiche Webseiten</h2>
+                <div class="link-grid">
+                    <div class="link-item">
+                        <a href="">StackOverflow</a>
+                    </div>
+
+                    <div class="link-item">
+                        <a href="">Reddit</a>
+                    </div>
+
+                    <div class="link-item">
+                        <a href="">W3Schools</a>
+                    </div>
+
+                    <div class="link-item">
+                        <a href="">GeeksForGeeks</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <script>
+            const sidebar = document.querySelector('.left-side');
+            const hamburger_btn = document.querySelector('.hamburger')
+            document.getElementById('hamburger').addEventListener('click', () => {
+                sidebar.classList.toggle('open');
+                hamburger_btn.classList.toggle('open')
+            });
+        </script>
+
+        <script>
+            // ---- collapsible sub-menus ------------------------------------------------
+            document.querySelectorAll('.side-nav-list > li > a[class="expandable"]').forEach(link => {
+                link.style.cursor = 'pointer';
+                link.addEventListener('click', e => {
+                    e.preventDefault();
+                    const ul = link.nextElementSibling;
+                    const isOpen = ul.classList.contains('open');
+
+                    document.querySelectorAll('.side-nav-list ul').forEach(u => u.classList.remove('open'));
+
+                    if (!isOpen) ul.classList.add('open');
+                });
+            });
+        </script>
+    </body>
+</html>

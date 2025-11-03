@@ -1,0 +1,236 @@
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+    font-size: 100%;
+}
+
+body {
+    font-family: 'Poppins';
+    background: #f4f6f9;
+    color: #333;
+    line-height: 1.5;
+}
+
+.main-nav-list {
+    position: fixed;
+    top: 0;
+    right: 0;
+    flex-direction: column;
+}
+
+.main-nav-list nav ul {
+    padding: 1rem;
+    gap: 1rem;
+    list-style: none;
+    display: flex;
+}
+
+.main-nav-list nav ul li a {
+    text-decoration: none;
+    color: #266aad;
+    font-size: 1.1rem;
+    transition: all .3s ease-in-out;
+}
+
+.main-nav-list nav ul li a:hover {
+    color: #3f99d9;
+}
+
+.left-side {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 280px;
+    height: 100vh;
+    background: #ffffff;
+    box-shadow: 2px 0 12px rgba(0,0,0,.08);
+    overflow-y: auto;
+    z-index: 1000;
+}
+
+@media screen and (max-width: 1300px) {
+    .content {
+        margin-left: 0;
+        padding: 2rem;
+    }
+
+    /* sidebar left */
+    .left-side {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 280px;
+        height: 100vh;
+        background: #ffffff;
+        box-shadow: 2px 0 12px rgba(0,0,0,.08);
+        overflow-y: auto;
+        z-index: 1000;
+        transition: transform .3s ease;
+        transform: translateX(-100%);
+    }
+
+    .left-side.open { transform: translateX(0); }
+
+    .hamburger {
+        position: fixed;
+        z-index: 1100;
+        background: #327fcb;
+        color: #fff;
+        border: none;
+        font-size: 1.5rem;
+        width: 44px;
+        height: 44px;
+        border-radius: 0 0 .4rem 0;
+        cursor: pointer;
+        transition: transform .3s ease;
+    }
+
+    .hamburger.open {
+        transform: translateX(280px) rotate(180deg);
+        border-radius: .4rem 0 0 0;
+    }
+}
+
+/* navigation links */
+.side-nav-list {
+  list-style: none;
+}
+
+.side-nav-list li {
+  border-bottom: 1px solid rgba(0,0,0,.04);
+}
+
+/* ---- top level links ---- */
+.side-nav-list li a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  font-weight: 600;
+  color: #2d3748;
+  text-decoration: none;
+  transition: background .25s, color .25s, padding-left .25s;
+}
+
+/* caret icon (pure CSS) */
+.expandable::after {
+  content: "▶";
+  font-size: .7rem;
+  transition: transform .25s;
+}
+.expandable.open::after { transform: rotate(90deg); }
+
+.side-nav-list li a:hover {
+  background: #eef2ff;
+  color: #6366f1;
+  padding-left: 1.8rem;
+}
+
+/* ---- sub-menus ---- */
+.side-nav-list ul {
+  list-style: none;
+  background: #f8fafc;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .35s ease, padding .35s ease;
+}
+
+.side-nav-list ul.open {
+  max-height: 600px;
+  padding: .5rem 0;
+}
+
+.side-nav-list ul li a {
+  display: block;
+  padding: .75rem 1.5rem .75rem 3rem;
+  color: #718096;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background .25s, color .25s, padding-left .25s;
+}
+
+.side-nav-list ul li a:hover {
+  background: #e0e7ff;
+  color: #6366f1;
+  padding-left: 3.3rem;
+}
+
+/* -----------------------------------------------------------
+                Main Content Style
+----------------------------------------------------------- */
+
+.content {
+    display: flex;
+    flex-direction: column;
+    margin-left: 280px;
+    padding: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (max-width: 1300px) {
+    .content {
+        margin-left: 0;
+        padding: 2rem;
+    }
+}
+
+.content .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    font-weight: 700;
+    color: #1a1a1a;
+}
+
+.content .hero h1 {
+    font-size: 2.8rem;
+}
+
+.title-description {
+    font-size: 1.1rem;
+}
+
+.content-site-title {
+    font-weight: 700;
+    font-size: 2.8rem;
+    background: linear-gradient(120deg, #6366f1 0%, #8b5cf6 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.content .hero .stats {
+    display: flex;
+    flex-direction: row;
+    margin-top: 2rem;
+}
+
+.content .hero .stats .stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    font-size: 1.2rem;
+    padding: 40px;
+    margin: 10px;
+    border-radius: 20px;
+}
+
+.content .hero .stats .stat strong {
+    font-size: 3rem;
+    background: linear-gradient(120deg, #6366f1 0%, #8b5cf6 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
