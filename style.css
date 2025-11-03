@@ -35,7 +35,8 @@ body {
 .main-nav-list nav ul li a {
     text-decoration: none;
     color: #266aad;
-    font-size: 1.1rem;
+    font-size: 1.4rem;
+    font-weight: 700;
     transition: all .3s ease-in-out;
 }
 
