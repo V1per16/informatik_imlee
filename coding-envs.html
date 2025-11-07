@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding Environments | IT Helfer Im Lee</title>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main-nav-list">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="">Contact</a></li>
+                <li><a href="">Projects</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="left-side">
+        <nav>
+            <ul class="side-nav-list">
+                <li><a href="coding-envs.html">Overall coding environments</a></li>
+
+                <li><a href="" class="expandable">Introduction to Python</a>
+                    <ul>
+                        <li><a href="py-setup.html">1. Setup & Environment</a></li>
+                        <li><a href="py-print.html">2. Print Command</a></li>
+                        <li><a href="py-variables.html">3. Variables</a></li>
+                        <li><a href="py-input.html">4. User Input</a></li>
+                        <li><a href="py-conditions.html">5. If-Else</a></li>
+                        <li><a href="py-while.html">6. While Loops</a></li>
+                        <li><a href="py-for.html">7. For Loops</a></li>
+                        <li><a href="py-functions.html">8. Functions</a></li>
+                        <li><a href="py-classes.html">9. Classes (Intro)</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="" class="expandable">Introduction to HTML</a>
+                    <ul>
+                        <li><a href="">basic code structure</a></li>
+                        <li><a href="">navigation</a></li>
+                        <li><a href="">hyperlinks</a></li>
+                        <li><a href="">lists</a></li>
+                        <li><a href="">buttons</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="" class="expandable">Introduction to CSS</a>
+                    <ul>
+                        <li><a href="">basic code structure</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <button class="hamburger" id="hamburger">Menu</button>
+
+    <main class="content">
+        <div class="lesson-container">
+            <h1 class="lesson-title">Overall Coding Environments</h1>
+            <p class="lesson-subtitle">Wähle den besten Editor für dein Lernen</p>
+
+            <div class="lesson-content">
+                <p>Ein <strong>Code-Editor</strong> ist dein Werkzeug zum Schreiben von Programmen. Hier sind die besten für Anfänger:</p>
+
+                <!-- VS Code -->
+                <div class="env-card">
+                    <div class="env-icon">VS</div>
+                    <h2>Visual Studio Code (VS Code)</h2>
+                    <p><strong>Kostenlos • Leicht • Beliebt</strong></p>
+                    <p>Der beste Einstieg! Einfach zu bedienen, viele Erweiterungen.</p>
+                    <ul>
+                        <li>Perfekt für Python, HTML, CSS</li>
+                        <li>Integriertes Terminal</li>
+                        <li>Syntax-Highlighting</li>
+                    </ul>
+                    <a href="https://code.visualstudio.com" target="_blank" class="env-btn">Download VS Code</a>
+                </div>
+
+                <!-- PyCharm -->
+                <div class="env-card">
+                    <div class="env-icon">PC</div>
+                    <h2>PyCharm (Community)</h2>
+                    <p><strong>Kostenlos • Leistungsstark • Für Python</strong></p>
+                    <p>Von JetBrains – ideal, wenn du nur Python lernen willst.</p>
+                    <ul>
+                        <li>Automatische Code-Vervollständigung</li>
+                        <li>Fehlererkennung</li>
+                        <li>Projektverwaltung</li>
+                    </ul>
+                    <a href="https://www.jetbrains.com/pycharm/download/" target="_blank" class="env-btn">Download PyCharm</a>
+                </div>
+
+                <!-- Replit -->
+                <div class="env-card">
+                    <div class="env-icon">Cloud</div>
+                    <h2>Replit</h2>
+                    <p><strong>Online • Keine Installation • Sofort starten</strong></p>
+                    <p>Perfekt auf Handy oder ohne Download.</p>
+                    <ul>
+                        <li>Direkt im Browser</li>
+                        <li>Teilen mit Freunden</li>
+                        <li>Python, HTML, JS</li>
+                    </ul>
+                    <a href="https://replit.com" target="_blank" class="env-btn">Replit öffnen</a>
+                </div>
+
+                <!-- Thonny -->
+                <div class="env-card">
+                    <div class="env-icon">TH</div>
+                    <h2>Thonny</h2>
+                    <p><strong>Für absolute Anfänger • Einfach • Mit Python</strong></p>
+                    <p>Zeigt dir Schritt für Schritt, was passiert.</p>
+                    <ul>
+                        <li>Debugger inklusive</li>
+                        <li>Sehr übersichtlich</li>
+                        <li>Ideal für Schulen</li>
+                    </ul>
+                    <a href="https://thonny.org" target="_blank" class="env-btn">Download Thonny</a>
+                </div>
+
+                <!-- Jupyter -->
+                <div class="env-card">
+                    <div class="env-icon">Notebook</div>
+                    <h2>Jupyter Notebook</h2>
+                    <p><strong>Interaktiv • Für Daten & Lernen</strong></p>
+                    <p>Wie ein Notizbuch mit Code + Text.</p>
+                    <ul>
+                        <li>Code + Erklärung zusammen</li>
+                        <li>Perfekt für Mathe & Daten</li>
+                        <li>Online: Google Colab</li>
+                    </ul>
+                    <a href="https://colab.research.google.com" target="_blank" class="env-btn">Google Colab öffnen</a>
+                </div>
+
+                <div class="tip" style="margin-top: 2rem;">
+                    <strong>Empfehlung für dich:</strong><br>
+                    Starte mit <strong>VS Code</strong> oder <strong>Replit</strong> – beides ist kostenlos und einfach!<br>
+                    Benutze <strong>PyCharm</strong> wenn du dich nur auf Python konzentrierst.
+                </div>
+            </div>
+
+            <div class="nav-buttons">
+                <a href="index.html" class="nav-btn prev">Zurück zur Startseite</a>
+                <a href="py-setup.html" class="nav-btn next">Weiter: Python Setup</a>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        const sidebar = document.querySelector('.left-side');
+        const hamburger = document.getElementById('hamburger');
+        hamburger.addEventListener('click', () => {
+            sidebar.classList.toggle('open');
+            hamburger.classList.toggle('open');
+            hamburger.textContent = hamburger.classList.contains('open') ? 'X' : 'Menu';
+        });
+    </script>
+    <script>
+        document.querySelectorAll('.expandable').forEach(link => {
+            link.addEventListener('click', e => {
+                e.preventDefault();
+                const ul = link.nextElementSibling;
+                ul.classList.toggle('open');
+                link.classList.toggle('open');
+            });
+        });
+    </script>
+</body>
+</html>
