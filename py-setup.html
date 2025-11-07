@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Setup | IT Helfer Im Lee</title>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main-nav-list">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="">Contact</a></li>
+                <li><a href="">Projects</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="left-side">
+        <nav>
+            <ul class="side-nav-list">
+                <li><a href="">Overall coding environments</a></li>
+
+                <li><a href="" class="expandable">Introduction to Python</a>
+                    <ul>
+                        <li><a href="py-setup.html">1. Setup & Environment</a></li>
+                        <li><a href="py-print.html">2. Print Command</a></li>
+                        <li><a href="py-variables.html">3. Variables</a></li>
+                        <li><a href="py-input.html">4. User Input</a></li>
+                        <li><a href="py-conditions.html">5. If-Else</a></li>
+                        <li><a href="py-while.html">6. While Loops</a></li>
+                        <li><a href="py-for.html">7. For Loops</a></li>
+                        <li><a href="py-functions.html">8. Functions</a></li>
+                        <li><a href="py-classes.html">9. Classes (Intro)</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="" class="expandable">Introduction to HTML</a>
+                    <ul>
+                        <li><a href="">basic code structure</a></li>
+                        <li><a href="">navigation</a></li>
+                        <li><a href="">hyperlinks</a></li>
+                        <li><a href="">lists</a></li>
+                        <li><a href="">buttons</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="" class="expandable">Introduction to CSS</a>
+                    <ul>
+                        <li><a href="">basic code structure</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <button class="hamburger" id="hamburger">Menu</button>
+
+    <main class="content">
+        <div class="lesson-container">
+            <h1 class="lesson-title">1. Vorbereitungen & Umgebung</h1>
+            <p class="lesson-subtitle">So startest du mit Python – Schritt für Schritt</p>
+
+            <div class="lesson-content">
+                <p>Bevor du programmieren kannst, brauchst du <strong>Python</strong> und einen <strong>Editor</strong>. Das ist wie ein Werkzeugkasten fürs Coden.</p>
+
+                <h2>Schritt 1: Python installieren</h2>
+                <div class="step">
+                    <strong>Gehe zu:</strong> <a href="https://python.org/downloads" target="_blank">python.org/downloads</a><br>
+                    Klicke auf den großen gelben Button: <strong>"Download Python"</strong>
+                </div>
+
+                <div class="tip">
+                    <strong>Wichtig (Windows):</strong> Aktiviere <code>Add Python to PATH</code>!
+                </div>
+
+                <h2>Schritt 2: VS Code installieren</h2>
+                <div class="step">
+                    <strong>Lade es hier herunter:</strong> <a href="https://code.visualstudio.com" target="_blank">code.visualstudio.com</a><br>
+                    Installiere es wie jedes andere Programm.
+                </div>
+
+                <h2>Schritt 3: Dein erstes Programm</h2>
+                <p>Erstelle eine Datei: <code>hello.py</code></p>
+                <div class="code-block">
+                    <code><span class="code-comment"># Das ist dein erstes Python-Programm!</span><br>
+<span class="code-keyword">print</span>(<span class="code-string">"Hallo, ich lerne Python!"</span>)</code>
+                </div>
+
+                <div class="task-box">
+                    <strong>Deine Aufgabe:</strong><br>
+                    1. Öffne VS Code<br>
+                    2. Erstelle <code>hello.py</code><br>
+                    3. Schreibe den Code oben rein<br>
+                    4. Drücke <code>Strg + S</code><br>
+                    5. Öffne das Terminal und tippe:<br>
+                    <code>python hello.py</code>
+                </div>
+
+                <div class="example-output">
+                    Hallo, ich lerne Python!
+                </div>
+            </div>
+
+            <div class="nav-buttons">
+                <a href="index.html" class="nav-btn prev">Zurück zur Startseite</a>
+                <a href="py-print.html" class="nav-btn next">Weiter: Print-Befehl</a>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        const sidebar = document.querySelector('.left-side');
+        const hamburger = document.getElementById('hamburger');
+        hamburger.addEventListener('click', () => {
+            sidebar.classList.toggle('open');
+            hamburger.classList.toggle('open');
+            hamburger.textContent = hamburger.classList.contains('open') ? 'X' : 'Menu';
+        });
+    </script>
+    <script>
+        document.querySelectorAll('.expandable').forEach(link => {
+            link.addEventListener('click', e => {
+                e.preventDefault();
+                const ul = link.nextElementSibling;
+                ul.classList.toggle('open');
+                link.classList.toggle('open');
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Print | IT Helfer Im Lee</title>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main-nav-list">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="">Contact</a></li>
+                <li><a href="">Projects</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="left-side">
+        <nav>
+            <ul class="side-nav-list">
+                <li><a href="">Overall coding environments</a></li>
+
+                <li><a href="" class="expandable">Introduction to Python</a>
+                    <ul>
+                        <li><a href="py-setup.html">1. Setup & Environment</a></li>
+                        <li><a href="py-print.html">2. Print Command</a></li>
+                        <li><a href="py-variables.html">3. Variables</a></li>
+                        <li><a href="py-input.html">4. User Input</a></li>
+                        <li><a href="py-conditions.html">5. If-Else</a></li>
+                        <li><a href="py-while.html">6. While Loops</a></li>
+                        <li><a href="py-for.html">7. For Loops</a></li>
+                        <li><a href="py-functions.html">8. Functions</a></li>
+                        <li><a href="py-classes.html">9. Classes (Intro)</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="" class="expandable">Introduction to HTML</a>
+                    <ul>
+                        <li><a href="">basic code structure</a></li>
+                        <li><a href="">navigation</a></li>
+                        <li><a href="">hyperlinks</a></li>
+                        <li><a href="">lists</a></li>
+                        <li><a href="">buttons</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="" class="expandable">Introduction to CSS</a>
+                    <ul>
+                        <li><a href="">basic code structure</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <button class="hamburger" id="hamburger">Menu</button>
+
+    <main class="content">
+        <div class="lesson-container">
+            <h1 class="lesson-title">2. Der Print-Befehl</h1>
+            <p class="lesson-subtitle">So zeigt Python Text und Zahlen auf dem Bildschirm an</p>
+
+            <div class="lesson-content">
+                <p>Der <code>print()</code>-Befehl ist wie ein <strong>Lautsprecher</strong> für deinen Computer. Er sagt ihm: „Zeige das auf dem Bildschirm an!“</p>
+
+                <h2>1. Was sind Datentypen?</h2>
+                <p>Bevor du etwas ausgibst, musst du wissen, <strong>was</strong> du ausgibst. Python kennt verschiedene Arten von Daten:</p>
+
+                <div class="step">
+                    <strong>Text (String)</strong><br>
+                    Alles, was in <code>"Anführungszeichen"</code> steht → z. B. <code>"Hallo"</code>
+                </div>
+
+                <div class="step">
+                    <strong>Zahl (Integer)</strong><br>
+                    Ganze Zahlen → z. B. <code>42</code>, <code>-10</code>
+                </div>
+
+                <div class="step">
+                    <strong>Komma-Zahl (Float)</strong><br>
+                    Zahlen mit Nachkommastellen → z. B. <code>3.14</code>
+                </div>
+
+                <div class="step">
+                    <strong>Wahr/Falsch (Boolean)</strong><br>
+                    Nur zwei Werte: <code>True</code> oder <code>False</code>
+                </div>
+
+                <h2>2. Wie gibst du sie aus?</h2>
+                <p>Du schreibst einfach <code>print(</code> und dann den Wert <code>)</code>:</p>
+
+                <div class="code-block">
+                    <code><span class="code-comment"># Text → braucht Anführungszeichen</span><br>
+<span class="code-keyword">print</span>(<span class="code-string">"Hallo Welt!"</span>)<br><br>
+
+<span class="code-comment"># Zahl → KEINE Anführungszeichen</span><br>
+<span class="code-keyword">print</span>(<span class="code-number">100</span>)<br><br>
+
+<span class="code-comment"># Mehrere Dinge auf einer Zeile</span><br>
+<span class="code-keyword">print</span>(<span class="code-string">"Ich bin"</span>, <span class="code-number">16</span>, <span class="code-string">"Jahre alt"</span>)<br><br>
+
+<span class="code-comment"># Wahr oder Falsch</span><br>
+<span class="code-keyword">print</span>(<span class="code-keyword">True</span>)</code>
+                </div>
+
+                <div class="example-output">
+                    Hallo Welt!<br>
+                    100<br>
+                    Ich bin 16 Jahre alt<br>
+                    True
+                </div>
+
+                <div class="tip">
+                    <strong>Wichtig:</strong> Text <strong>muss</strong> in <code>" "</code> stehen. Zahlen <strong>nicht</strong>!<br>
+                    Text: <code>print("42")</code> → gibt die Zahl als Text Datentyp aus<br>
+                    Zahl: <code>print(42)</code> → gibt die Zahl als Zahlen Datentyp aus
+                </div>
+
+                <h2>3. Neue Zeile mit \n</h2>
+                <p>Willst du einen Zeilenumbruch? Nutze <code>\n</code>:</p>
+                <div class="code-block">
+                    <code><span class="code-keyword">print</span>(<span class="code-string">"Erste Zeile\nZweite Zeile"</span>)</code>
+                </div>
+
+                <div class="example-output">
+                    Erste Zeile<br>
+                    Zweite Zeile
+                </div>
+
+                <div class="task-box">
+                    <strong>Deine einfache Aufgabe:</strong><br>
+                    Schreibe eine Zeile Code, die folgendes ausgibt:<br><br>
+                    <code>Mein Name ist Max und ich bin 14 Jahre alt.</code>
+                </div>
+            </div>
+
+            <div class="nav-buttons">
+                <a href="py-setup.html" class="nav-btn prev">Zurück: Setup</a>
+                <a href="py-variables.html" class="nav-btn next">Weiter: Variablen</a>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        const sidebar = document.querySelector('.left-side');
+        const hamburger = document.getElementById('hamburger');
+        hamburger.addEventListener('click', () => {
+            sidebar.classList.toggle('open');
+            hamburger.classList.toggle('open');
+            hamburger.textContent = hamburger.classList.contains('open') ? 'X' : 'Menu';
+        });
+    </script>
+    <script>
+        document.querySelectorAll('.expandable').forEach(link => {
+            link.addEventListener('click', e => {
+                e.preventDefault();
+                const ul = link.nextElementSibling;
+                ul.classList.toggle('open');
+                link.classList.toggle('open');
+            });
+        });
+    </script>
+</body>
+</html>

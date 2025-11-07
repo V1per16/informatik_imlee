@@ -257,6 +257,10 @@ body {
     max-width: 1400px;
 }
 
+.course-link {
+    text-decoration: none;
+}
+
 .course {
     flex: 1 1 280px;
     max-width: 320px;
@@ -343,4 +347,183 @@ body {
 .link-item .icon {
     font-size: 1.3rem;
     color: #4b5563;
+}
+
+/* ========================================
+   LESSON PAGE STYLES – BEGINNER FRIENDLY
+   ======================================== */
+.lesson-container {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 2.5rem;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    font-family: 'Poppins', sans-serif;
+}
+
+.lesson-title {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.lesson-subtitle {
+    font-size: 1.2rem;
+    color: #6366f1;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-weight: 500;
+}
+
+.lesson-content {
+    line-height: 1.9;
+    color: #2d3748;
+    font-size: 1.05rem;
+}
+
+.lesson-content h2 {
+    font-size: 1.8rem;
+    color: #1a1a1a;
+    margin: 2.5rem 0 1rem;
+    position: relative;
+    padding-bottom: 0.6rem;
+}
+
+.lesson-content h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 70px;
+    height: 4px;
+    background: linear-gradient(90deg, #6366f1, #8b5cf6);
+    border-radius: 2px;
+}
+
+.lesson-content p {
+    margin-bottom: 1.2rem;
+}
+
+.step {
+    background: #f8faff;
+    border-left: 5px solid #6366f1;
+    padding: 1.2rem 1.5rem;
+    border-radius: 0 12px 12px 0;
+    margin: 1.5rem 0;
+    font-size: 1rem;
+}
+
+.step strong {
+    color: #1a1a1a;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.code-block {
+    background: #1a1a1c;
+    color: #e2e8f0;
+    padding: 1.2rem 1.5rem;
+    border-radius: 14px;
+    font-family: 'Courier New', monospace;
+    font-size: 0.95rem;
+    overflow-x: auto;
+    margin: 1.8rem 0;
+    position: relative;
+    border: 1px solid #333;
+}
+
+.code-block::before {
+    content: 'Python';
+    position: absolute;
+    top: 0.6rem;
+    right: 1rem;
+    font-size: 0.75rem;
+    color: #888;
+    font-family: sans-serif;
+}
+
+.code-comment { color: #6a9955; }
+.code-string { color: #ce9178; }
+.code-keyword { color: #569cd6; }
+.code-number { color: #b5cea8; }
+.code-function { color: #dcdcaa; }
+
+.task-box {
+    background: #fff8e6;
+    border: 2px dashed #f59e0b;
+    padding: 1.3rem;
+    border-radius: 14px;
+    margin: 2rem 0;
+    font-size: 1rem;
+}
+
+.task-box strong {
+    color: #d97706;
+}
+
+.example-output {
+    background: #f1f5f9;
+    border: 1px solid #cbd5e1;
+    padding: 1rem 1.2rem;
+    border-radius: 10px;
+    font-family: 'Courier New', monospace;
+    margin: 1rem 0;
+    color: #1e293b;
+    font-weight: 500;
+}
+
+.tip {
+    background: #ecfdf5;
+    border-left: 4px solid #10b981;
+    padding: 1rem 1.2rem;
+    border-radius: 0 10px 10px 0;
+    margin: 1.5rem 0;
+    font-size: 0.95rem;
+    color: #065f46;
+}
+
+.nav-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.nav-btn {
+    padding: 0.9rem 1.8rem;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    min-width: 140px;
+    text-align: center;
+}
+
+.nav-btn.next {
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    color: white;
+}
+
+.nav-btn.next:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(99,102,241,0.4);
+}
+
+.nav-btn.prev {
+    background: #e2e8f0;
+    color: #1a1a1a;
+}
+
+.nav-btn.prev:hover {
+    background: #cbd5e1;
+}
+
+@media (max-width: 768px) {
+    .lesson-container { padding: 1.5rem; margin: 1rem; }
+    .nav-buttons { flex-direction: column; }
 }
