@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Print | IT Helfer Im Lee</title>
+    <title>Classes | IT Helfer Im Lee</title>
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -49,71 +49,47 @@
 
     <main class="content">
         <div class="lesson-container">
-            <h1 class="lesson-title">2. Der Print-Befehl</h1>
-            <p class="lesson-subtitle">So zeigt Python Text und Zahlen an</p>
+            <h1 class="lesson-title">9. Klassen – Baupläne für Objekte</h1>
+            <p class="lesson-subtitle">Organisiere deinen Code Objektorientiert</p>
 
             <div class="lesson-content">
-                <p><code>print()</code> ist der <strong>Lautsprecher</strong> deines Programms. Er gibt alles aus, was du ihm gibst.</p>
+                <p>Eine <strong>Klasse</strong> ist wie ein <strong>Bauplan</strong>. Ein <strong>Objekt</strong> ist das fertige Haus.</p>
 
-                <h2>1. Was sind Datentypen?</h2>
-                <p>Python unterscheidet zwischen verschiedenen Arten von Daten:</p>
+                <h2>1. Was ist __init__?</h2>
+                <p><code>__init__</code> ist der <strong>Konstruktor</strong>. Er wird <strong>automatisch aufgerufen</strong>, wenn du ein Objekt erstellst.</p>
 
-                <div class="step">
-                    <strong>String (Text)</strong><br>
-                    Immer in <code>"Anführungszeichen"</code> → <code>"Hallo"</code>
-                </div>
-                <div class="step">
-                    <strong>Integer (Ganze Zahl)</strong><br>
-                    Ohne Anführungszeichen → <code>42</code>
-                </div>
-                <div class="step">
-                    <strong>Float (Kommazahl)</strong><br>
-                    Mit Punkt → <code>3.14</code>
-                </div>
-                <div class="step">
-                    <strong>Boolean</strong><br>
-                    Nur <code>True</code> oder <code>False</code>
-                </div>
-
-                <h2>2. print() in Aktion</h2>
                 <div class="code-block">
-                    <code><span class="code-comment"># Text ausgeben</span><br>
-<span class="code-keyword">print</span>(<span class="code-string">"Hallo Welt!"</span>)<br><br>
-
-<span class="code-comment"># Zahl ausgeben</span><br>
-<span class="code-keyword">print</span>(<span class="code-number">100</span>)<br><br>
-
-<span class="code-comment"># Mehrere Dinge</span><br>
-<span class="code-keyword">print</span>(<span class="code-string">"Alter:"</span>, <span class="code-number">16</span>)<br><br>
-
-<span class="code-comment"># Mit Zeilenumbruch</span><br>
-<span class="code-keyword">print</span>(<span class="code-string">"Zeile 1\nZeile 2"</span>)</code>
+                    <code><span class="code-keyword">class</span> <span class="code-function">Hund</span>:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-keyword">def</span> <span class="code-function">__init__</span>(self, name):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.name = name  <span class="code-comment"># Speichere Name im Objekt</span><br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-keyword">def</span> <span class="code-function">bell</span>(self):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-keyword">print</span>(<span class="code-string">"Wuff!"</span>)<br><br>
+<span class="code-comment"># Objekt erstellen</span><br>
+mein_hund = Hund(<span class="code-string">"Bello"</span>)<br>
+<span class="code-keyword">print</span>(mein_hund.name)<br>
+mein_hund.bell()</code>
                 </div>
 
                 <div class="example-output">
-                    Hallo Welt!<br>
-                    100<br>
-                    Alter: 16<br>
-                    Zeile 1<br>
-                    Zeile 2
+                    Bello<br>Wuff!
                 </div>
 
                 <div class="tip">
-                    <strong>Text braucht Anführungszeichen ""</strong> → sonst denkt Python, es ist eine Variable!<br>
-                    Falsch: <code>print(Hallo)</code> → Fehler<br>
-                    Richtig: <code>print("Hallo")</code> → Hallo
+                    <strong>self</strong> = das aktuelle Objekt<br>
+                    <strong>__init__</strong> = wird beim Erstellen aufgerufen
                 </div>
 
                 <div class="task-box">
                     <strong>Deine Aufgabe:</strong><br>
-                    Gib in einer Zeile aus:<br>
-                    <code>Ich heiße [Name] und bin [Alter] Jahre alt.</code>
+                    Erstelle eine Klasse <code>Schueler</code> mit Name und Lieblingsfach.<br>
+                    Tip: Definiere die Variablen Name und Lieblingsfach in der __init__ Methode. <br>
+                    Füge <code>vorstellen()</code> hinzu → „Ich bin [Name] und mag [Fach].“
                 </div>
             </div>
 
             <div class="nav-buttons">
-                <a href="py-setup.html" class="nav-btn prev">Zurück: Setup</a>
-                <a href="py-variables.html" class="nav-btn next">Weiter: Variablen</a>
+                <a href="py-functions.html" class="nav-btn prev">Zurück: Funktionen</a>
+                <a href="index.html" class="nav-btn next">Zurück zur Startseite</a>
             </div>
         </div>
     </main>

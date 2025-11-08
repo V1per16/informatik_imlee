@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>If-Else | IT Helfer Im Lee</title>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main-nav-list">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="">Contact</a></li>
+                <li><a href="">Projects</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="left-side">
+        <nav>
+            <ul class="side-nav-list">
+                <li><a href="coding-envs.html">Overall coding environments</a></li>
+                <li><a href="" class="expandable">Introduction to Python</a>
+                    <ul>
+                        <li><a href="py-setup.html">1. Setup & Environment</a></li>
+                        <li><a href="py-print.html">2. Print Command</a></li>
+                        <li><a href="py-variables.html">3. Variables</a></li>
+                        <li><a href="py-input.html">4. User Input</a></li>
+                        <li><a href="py-conditions.html">5. If-Else</a></li>
+                        <li><a href="py-while.html">6. While Loops</a></li>
+                        <li><a href="py-for.html">7. For Loops</a></li>
+                        <li><a href="py-functions.html">8. Functions</a></li>
+                        <li><a href="py-classes.html">9. Classes (Intro)</a></li>
+                    </ul>
+                </li>
+                <li><a href="" class="expandable">Introduction to HTML</a>
+                    <ul><li><a href="">basic code structure</a></li></ul>
+                </li>
+                <li><a href="" class="expandable">Introduction to CSS</a>
+                    <ul><li><a href="">basic code structure</a></li></ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <button class="hamburger" id="hamburger">☰</button>
+
+    <main class="content">
+        <div class="lesson-container">
+            <h1 class="lesson-title">5. Bedingungen mit if-else</h1>
+            <p class="lesson-subtitle">Baue Bedingungen in dein Programm ein</p>
+
+            <div class="lesson-content">
+                <p>Mit <code>if</code> kannst du sagen: <strong>„Wenn das stimmt, mach das!“</strong></p>
+
+                <h2>1. Vergleichsoperatoren – Die Fragen</h2>
+                <p>Bevor du entscheiden kannst, musst du <strong>fragen</strong>. Das sind die 6 wichtigsten:</p>
+
+                <div class="code-block">
+                    <code><span class="code-number">5</span> <span class="code-keyword">==</span> <span class="code-number">5</span>    <span class="code-comment"># gleich? → True</span><br>
+<span class="code-number">5</span> <span class="code-keyword">!=</span> <span class="code-number">3</span>    <span class="code-comment"># ungleich? → True</span><br>
+<span class="code-number">10</span> <span class="code-keyword">></span> <span class="code-number">7</span>    <span class="code-comment"># größer? → True</span><br>
+<span class="code-number">3</span> <span class="code-keyword"><</span> <span class="code-number">8</span>     <span class="code-comment"># kleiner? → True</span><br>
+<span class="code-number">18</span> <span class="code-keyword">>=</span> <span class="code-number">18</span>  <span class="code-comment"># größer oder gleich? → True</span><br>
+<span class="code-number">5</span> <span class="code-keyword"><=</span> <span class="code-number">10</span>   <span class="code-comment"># kleiner oder gleich? → True</span></code>
+                </div>
+
+                <div class="tip">
+                    <strong>"=="</strong> bedeutet „Ist gleich?“<br>
+                    <strong>"="</strong> bedeutet „Speichere in Variable“
+                </div>
+
+                <h2>2. if-else – Die Entscheidung</h2>
+                <div class="code-block">
+                    <code><span class="code-keyword">alter</span> = <span class="code-number">16</span><br><br>
+<span class="code-keyword">if</span> alter >= <span class="code-number">18</span>:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-keyword">print</span>(<span class="code-string">"Du darfst wählen!"</span>)<br>
+<span class="code-keyword">else</span>:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-keyword">print</span>(<span class="code-string">"Noch nicht alt genug."</span>)</code>
+                </div>
+
+                <div class="example-output">
+                    Noch nicht alt genug.
+                </div>
+
+                <div class="tip">
+                    <strong>Einrückung</strong><br>
+                    Alles was passieren soll, nachdem entschieden wurde, muss eingerückt sein.<br>
+                    Code unter <code>if</code> und <code>else</code> muss <strong>4 Leerzeichen nach rechts</strong>.
+                </div>
+
+                <h2>3. elif – Mehr als Ja/Nein</h2>
+                <div class="code-block">
+                    <code>
+                        <span class="code-keyword">note</span> = <span class="code-number">3</span><br><br>
+                        <span class="code-keyword">if</span> note == <span class="code-number">6</span>:<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-keyword">print</span>(<span class="code-string">"Sehr gut!"</span>)<br>
+                        <span class="code-keyword">elif</span> note == <span class="code-number">5</span>:<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-keyword">print</span>(<span class="code-string">"Gut"</span>)<br>
+                        <span class="code-keyword">elif</span> note == <span class="code-number">4</span>:<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-keyword">print</span>(<span class="code-string">"Okay"</span>)<br>
+                        <span class="code-keyword">else</span>:<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-keyword">print</span>(<span class="code-string">"Leider nicht bestanden."</span>)
+                    </code>
+                </div>
+
+                <h2>4. and, or, not - Fragen verketten</h2>
+                <ul>
+                    <li><code>and</code> → beide müssen wahr sein</li>
+                    <li><code>or</code> → mindestens eines wahr</li>
+                    <li><code>not</code> → kehrt um</li>
+                </ul>
+
+                <div class="code-block">
+                    <code>
+                        <span class="code-keyword">note</span> = <span class="code-number">3</span><br>
+                        <span class="code-keyword">durchschnitt</span> = <span class="code-number">4.5</span><br><br>
+                        <span class="code-keyword">if</span> note <span class="code-keyword">>=</span> <span class="code-number">4</span> <span class="code-keyword">and
+                        </span> durchschnitt <span class="code-keyword">>=</span> <span class="code-number">4</span>: <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;print("bestanden") <br>
+                        <span class="code-keyword">elif</span> note <span class="code-keyword"><=</span> 4
+                        <span class="code-keyword">or</span> durchschnitt <span class="code-keyword"><=</span> 4: <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;print("Nicht bestanden") <br>
+                        <span class="code-keyword">else:</span> <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;print("Klasse wiederholen")
+                    </code>
+                </div>
+
+                <div class="task-box">
+                    <strong>Deine Aufgabe:</strong><br>
+                    Frage nach dem Alter → gib aus:<br>
+                    - „Baby“ (0–1)<br>
+                    - „Kind“ (2–12)<br>
+                    - „Teenager“ (13–17)<br>
+                    - „Erwachsen“ (18+)
+                </div>
+            </div>
+
+            <div class="nav-buttons">
+                <a href="py-input.html" class="nav-btn prev">Zurück: Input</a>
+                <a href="py-while.html" class="nav-btn next">Weiter: While-Schleife</a>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        const sidebar = document.querySelector('.left-side');
+        const hamburger = document.getElementById('hamburger');
+        hamburger.addEventListener('click', () => {
+            sidebar.classList.toggle('open');
+            hamburger.classList.toggle('open');
+            hamburger.textContent = hamburger.classList.contains('open') ? '✖' : '☰';
+        });
+    </script>
+    <script>
+        document.querySelectorAll('.expandable').forEach(link => {
+            link.addEventListener('click', e => {
+                e.preventDefault();
+                const ul = link.nextElementSibling;
+                ul.classList.toggle('open');
+                link.classList.toggle('open');
+            });
+        });
+    </script>
+</body>
+</html>

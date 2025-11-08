@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Python Input | IT Helfer Im Lee</title>
+    <title>Input | IT Helfer Im Lee</title>
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -23,7 +22,6 @@
         <nav>
             <ul class="side-nav-list">
                 <li><a href="coding-envs.html">Overall coding environments</a></li>
-
                 <li><a href="" class="expandable">Introduction to Python</a>
                     <ul>
                         <li><a href="py-setup.html">1. Setup & Environment</a></li>
@@ -37,21 +35,11 @@
                         <li><a href="py-classes.html">9. Classes (Intro)</a></li>
                     </ul>
                 </li>
-
                 <li><a href="" class="expandable">Introduction to HTML</a>
-                    <ul>
-                        <li><a href="">basic code structure</a></li>
-                        <li><a href="">navigation</a></li>
-                        <li><a href="">hyperlinks</a></li>
-                        <li><a href="">lists</a></li>
-                        <li><a href="">buttons</a></li>
-                    </ul>
+                    <ul><li><a href="">basic code structure</a></li></ul>
                 </li>
-
                 <li><a href="" class="expandable">Introduction to CSS</a>
-                    <ul>
-                        <li><a href="">basic code structure</a></li>
-                    </ul>
+                    <ul><li><a href="">basic code structure</a></li></ul>
                 </li>
             </ul>
         </nav>
@@ -61,53 +49,51 @@
 
     <main class="content">
         <div class="lesson-container">
-            <h1 class="lesson-title">4. Benutzereingabe</h1>
-            <p class="lesson-subtitle">Lass den Computer dich fragen – und speichere die Antwort!</p>
+            <h1 class="lesson-title">4. Benutzereingabe mit input()</h1>
+            <p class="lesson-subtitle">Lass den Benutzer antworten – mach dein Programm interaktiv</p>
 
             <div class="lesson-content">
-                <p>Mit <code>input()</code> kann dein Programm den Benutzer <strong>fragen</strong> – und die Antwort <strong>speichern</strong>.</p>
+                <p><code>input()</code> ist wie ein <strong>Mikrofon</strong>. Es wartet, bis der Benutzer etwas eingibt, und speichert die Antwort.</p>
 
-                <h2>So funktioniert input()</h2>
+                <h2>1. Einfache Eingabe</h2>
                 <div class="code-block">
-                    <code><span class="code-comment"># Frage stellen und Antwort speichern</span><br>
-<span class="code-keyword">name</span> = <span class="code-function">input</span>(<span class="code-string">"Wie heißt du? "</span>)<br>
+                    <code><span class="code-keyword">name</span> = <span class="code-function">input</span>(<span class="code-string">"Wie heißt du? "</span>)<br>
 <span class="code-keyword">print</span>(<span class="code-string">"Hallo"</span>, name, <span class="code-string">"!"</span>)</code>
                 </div>
 
                 <div class="example-output">
                     Wie heißt du? Max<br>
-                    Hallo Max!
+                    Hallo Max !
                 </div>
 
-                <h2>Zahlen eingeben? → Umwandeln!</h2>
-                <p>
-                    <code>input()</code> gibt immer <strong>Text</strong> zurück – auch bei Zahlen!
-                    <br>Das heisst, du musst den Input mit dem Befehl <code>int()</code> von einem String in eine Zahl umwandeln,
-                    da man keine Strings zu Zahlen addieren kann.
-                </p>
-                <div class="code-block">
-                    <code><span class="code-comment"># Falsch: Gibt Text aus</span><br>
-<span class="code-keyword">alter</span> = <span class="code-function">input</span>(<span class="code-string">"Alter: "</span>)<br>
-<span class="code-keyword">print</span>(alter + <span class="code-number">1</span>)  <span class="code-comment"># Fehler!</span><br><br>
+                <div class="tip">
+                    <strong>Wichtig:</strong> <code>input()</code> gibt <strong>immer Text</strong> zurück – auch bei Zahlen!
+                </div>
 
-<span class="code-comment"># Richtig: In Zahl umwandeln</span><br>
+                <h2>2. Zahlen umwandeln</h2>
+                <div class="code-block">
+                    <code><span class="code-comment"># Falsch: Text + Zahl = Fehler!</span><br>
+<span class="code-keyword">alter</span> = <span class="code-function">input</span>(<span class="code-string">"Alter: "</span>)<br>
+<span class="code-keyword">print</span>(alter + <span class="code-number">1</span>)  <span class="code-comment"># "15" + 1 → "151"</span><br><br>
+
+<span class="code-comment"># Richtig: In Zahl umwandeln mit int()</span><br>
 <span class="code-keyword">alter</span> = <span class="code-function">int</span>(<span class="code-function">input</span>(<span class="code-string">"Alter: "</span>))<br>
 <span class="code-keyword">print</span>(<span class="code-string">"Nächstes Jahr bist du"</span>, alter + <span class="code-number">1</span>)</code>
                 </div>
 
                 <div class="example-output">
-                    Alter: 16<br>
-                    Nächstes Jahr bist du 17
+                    Alter: 15<br>
+                    Nächstes Jahr bist du 16
                 </div>
 
                 <div class="tip">
-                    <strong>Merke:</strong><br>
-                    - <code>input("Frage")</code> → Text<br>
-                    - <code>int(input(...))</code> → Zahl<br>
-                    - <code>float(input(...))</code> → Kommazahl
+                    <strong>Umwandlungen:</strong><br>
+                    - <code>int()</code> → ganze Zahl<br>
+                    - <code>float()</code> → Kommazahl<br>
+                    - <code>str()</code> → Text
                 </div>
 
-                <h2>Beispiel: Rechner</h2>
+                <h2>3. Beispiel: Taschenrechner</h2>
                 <div class="code-block">
                     <code><span class="code-keyword">zahl1</span> = <span class="code-function">int</span>(<span class="code-function">input</span>(<span class="code-string">"Erste Zahl: "</span>))<br>
 <span class="code-keyword">zahl2</span> = <span class="code-function">int</span>(<span class="code-function">input</span>(<span class="code-string">"Zweite Zahl: "</span>))<br>
@@ -137,7 +123,7 @@
         hamburger.addEventListener('click', () => {
             sidebar.classList.toggle('open');
             hamburger.classList.toggle('open');
-            hamburger.textContent = hamburger.classList.contains('open') ? 'X' : '☰';
+            hamburger.textContent = hamburger.classList.contains('open') ? '✖' : '☰';
         });
     </script>
     <script>

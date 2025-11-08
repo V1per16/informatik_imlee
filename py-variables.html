@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Python Variablen | IT Helfer Im Lee</title>
+    <title>Variablen | IT Helfer Im Lee</title>
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -23,7 +22,6 @@
         <nav>
             <ul class="side-nav-list">
                 <li><a href="coding-envs.html">Overall coding environments</a></li>
-
                 <li><a href="" class="expandable">Introduction to Python</a>
                     <ul>
                         <li><a href="py-setup.html">1. Setup & Environment</a></li>
@@ -37,21 +35,11 @@
                         <li><a href="py-classes.html">9. Classes (Intro)</a></li>
                     </ul>
                 </li>
-
                 <li><a href="" class="expandable">Introduction to HTML</a>
-                    <ul>
-                        <li><a href="">basic code structure</a></li>
-                        <li><a href="">navigation</a></li>
-                        <li><a href="">hyperlinks</a></li>
-                        <li><a href="">lists</a></li>
-                        <li><a href="">buttons</a></li>
-                    </ul>
+                    <ul><li><a href="">basic code structure</a></li></ul>
                 </li>
-
                 <li><a href="" class="expandable">Introduction to CSS</a>
-                    <ul>
-                        <li><a href="">basic code structure</a></li>
-                    </ul>
+                    <ul><li><a href="">basic code structure</a></li></ul>
                 </li>
             </ul>
         </nav>
@@ -62,35 +50,36 @@
     <main class="content">
         <div class="lesson-container">
             <h1 class="lesson-title">3. Variablen – Speicher für Daten</h1>
-            <p class="lesson-subtitle">So speicherst du Informationen in Python</p>
+            <p class="lesson-subtitle">Wie Schachteln mit Namen, in die du Dinge legst</p>
 
             <div class="lesson-content">
-                <p>Eine <strong>Variable</strong> ist wie eine <strong>Schachtel mit einem Namen</strong>. Du kannst etwas hineinlegen – und später wieder herausnehmen.</p>
+                <p>Eine <strong>Variable</strong> ist wie eine <strong>Schachtel mit einem Aufkleber</strong>. Du kannst etwas hineinlegen – und später wieder herausnehmen.</p>
 
-                <h2>So erstellst du eine Variable</h2>
+                <h2>1. So erstellst du eine Variable</h2>
                 <div class="step">
-                    <strong>Schritt 1:</strong> Gib der Schachtel einen Namen (z. B. <code>name</code>)<br>
-                    <strong>Schritt 2:</strong> Setze <code>=</code> (das bedeutet „lege hinein“)<br>
-                    <strong>Schritt 3:</strong> Gib den Inhalt an (z. B. <code>"Anna"</code>)
+                    <strong>Schritt 1:</strong> Wähle einen Namen (z. B. <code>name</code>)<br>
+                    <strong>Schritt 2:</strong> Setze <code>=</code> → „lege hinein“<br>
+                    <strong>Schritt 3:</strong> Gib den Inhalt an
                 </div>
 
                 <div class="code-block">
                     <code><span class="code-comment"># Variable erstellen</span><br>
-<span class="code-keyword">name</span> = <span class="code-string">"Anna"</span><br>
-<span class="code-keyword">alter</span> = <span class="code-number">25</span><br>
-<span class="code-keyword">groesse</span> = <span class="code-number">1.65</span><br>
-<span class="code-keyword">mag_python</span> = <span class="code-keyword">True</span></code>
+<span class="code-keyword">name</span> = <span class="code-string">"Anna"</span>     <span class="code-comment"># Text → String</span><br>
+<span class="code-keyword">alter</span> = <span class="code-number">18</span>         <span class="code-comment"># Ganze Zahl → Integer</span><br>
+<span class="code-keyword">groesse</span> = <span class="code-number">1.65</span>     <span class="code-comment"># Kommazahl → Float</span><br>
+<span class="code-keyword">mag_python</span> = <span class="code-keyword">True</span> <span class="code-comment"># Wahr/Falsch → Boolean</span></code>
                 </div>
 
                 <div class="example-output">
                     name → "Anna"<br>
-                    alter → 25<br>
+                    alter → 18<br>
                     groesse → 1.65<br>
                     mag_python → True
                 </div>
 
-                <h2>So benutzt du Variablen</h2>
-                <p>Jetzt kannst du mit <code>print()</code> den Inhalt der Schachtel ausgeben:</p>
+                <h2>2. So benutzt du Variablen</h2>
+                <p>Jetzt kannst du den Inhalt der Variablen ausgeben:</p>
+
                 <div class="code-block">
                     <code><span class="code-keyword">print</span>(<span class="code-string">"Hallo"</span>, name)<br>
 <span class="code-keyword">print</span>(<span class="code-string">"Du bist"</span>, alter, <span class="code-string">"Jahre alt"</span>)</code>
@@ -98,24 +87,31 @@
 
                 <div class="example-output">
                     Hallo Anna<br>
-                    Du bist 25 Jahre alt
+                    Du bist 18 Jahre alt
                 </div>
 
-                <div class="tip">
-                    <strong>Regeln für Variablennamen:</strong><br>
-                    - Nur Buchstaben, Zahlen, Unterstrich<br>
-                    - Kein Leerzeichen<br>
-                    - Nicht mit Zahl beginnen<br>
-                    - Kleinbuchstaben empfohlen
-                </div>
+                <h2>3. Variablen ändern</h2>
+                <p>Du kannst den Inhalt der Variablen jederzeit austauschen:</p>
 
-                <h2>Variablen ändern</h2>
-                <p>Du kannst den Inhalt der Schachtel jederzeit austauschen:</p>
                 <div class="code-block">
                     <code><span class="code-keyword">punkte</span> = <span class="code-number">0</span><br>
 <span class="code-keyword">print</span>(punkte)  <span class="code-comment"># 0</span><br>
 <span class="code-keyword">punkte</span> = <span class="code-number">10</span><br>
 <span class="code-keyword">print</span>(punkte)  <span class="code-comment"># 10</span></code>
+                </div>
+
+                <h2>4. Regeln für Variablennamen</h2>
+                <ul style="margin: 1.5rem 0; padding-left: 1.5rem;">
+                    <li>Keine Leerzeichen → <code>mein name</code> → Falsch</li>
+                    <li>Nicht mit Zahl beginnen → <code>1name</code> → Falsch</li>
+                    <li>Nur Buchstaben, Zahlen, Unterstrich → <code>mein_name_2</code> → Richtig</li>
+                    <li>Kleinbuchstaben empfohlen → <code>alter</code> statt <code>Alter</code></li>
+                </ul>
+
+                <div class="tip">
+                    <strong>Merke:</strong><br>
+                    <code>"="</code> bedeutet „der variablen ... den Inhalt ... hinzufügen“<br>
+                    <code>"=="</code> bedeutet „ist gleich (Vergleichsoperator)“ (kommt in einer späteren Lektion)
                 </div>
 
                 <div class="task-box">
@@ -142,7 +138,7 @@
         hamburger.addEventListener('click', () => {
             sidebar.classList.toggle('open');
             hamburger.classList.toggle('open');
-            hamburger.textContent = hamburger.classList.contains('open') ? 'X' : '☰';
+            hamburger.textContent = hamburger.classList.contains('open') ? '✖' : '☰';
         });
     </script>
     <script>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Python Setup | IT Helfer Im Lee</title>
+    <title>Setup | IT Helfer Im Lee</title>
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -22,7 +22,6 @@
         <nav>
             <ul class="side-nav-list">
                 <li><a href="coding-envs.html">Overall coding environments</a></li>
-
                 <li><a href="" class="expandable">Introduction to Python</a>
                     <ul>
                         <li><a href="py-setup.html">1. Setup & Environment</a></li>
@@ -36,21 +35,11 @@
                         <li><a href="py-classes.html">9. Classes (Intro)</a></li>
                     </ul>
                 </li>
-
                 <li><a href="" class="expandable">Introduction to HTML</a>
-                    <ul>
-                        <li><a href="">basic code structure</a></li>
-                        <li><a href="">navigation</a></li>
-                        <li><a href="">hyperlinks</a></li>
-                        <li><a href="">lists</a></li>
-                        <li><a href="">buttons</a></li>
-                    </ul>
+                    <ul><li><a href="">basic code structure</a></li></ul>
                 </li>
-
                 <li><a href="" class="expandable">Introduction to CSS</a>
-                    <ul>
-                        <li><a href="">basic code structure</a></li>
-                    </ul>
+                    <ul><li><a href="">basic code structure</a></li></ul>
                 </li>
             </ul>
         </nav>
@@ -60,52 +49,76 @@
 
     <main class="content">
         <div class="lesson-container">
-            <h1 class="lesson-title">1. Vorbereitungen & Umgebung</h1>
-            <p class="lesson-subtitle">So startest du mit Python – Schritt für Schritt</p>
+            <h1 class="lesson-title">1. Setup & Umgebung</h1>
+            <p class="lesson-subtitle">So richtest du Python ein – Schritt für Schritt</p>
 
             <div class="lesson-content">
-                <p>Bevor du programmieren kannst, brauchst du <strong>Python</strong> und einen <strong>Editor</strong>. Das ist wie ein Werkzeugkasten fürs Coden.</p>
+                <p>Bevor du programmieren kannst, brauchst du <strong>Python</strong> und einen <strong>Editor</strong>. Wir zeigen dir die einfachsten Wege.</p>
 
-                <h2>Schritt 1: Python installieren</h2>
+                <h2>1. Python installieren</h2>
+                <p>Python ist die Programmiersprache. Du lädst sie von der offiziellen Seite herunter.</p>
+
                 <div class="step">
-                    <strong>Gehe zu:</strong> <a href="https://python.org/downloads" target="_blank">python.org/downloads</a><br>
-                    Klicke auf den großen gelben Button: <strong>"Download Python"</strong>
+                    <strong>Schritt 1:</strong> Gehe zu <a href="https://python.org" target="_blank">python.org</a><br>
+                    <strong>Schritt 2:</strong> Klicke auf „Downloads“ → „Python 3.x“<br>
+                    <strong>Schritt 3:</strong> Führe die Datei aus → <strong>Hake „Add Python to PATH“ an!</strong>
                 </div>
 
                 <div class="tip">
-                    <strong>Wichtig (Windows):</strong> Aktiviere <code>Add Python to PATH</code>!
+                    <strong>Warum „Add to PATH“?</strong><br>
+                    Damit kannst du <code>python</code> in der Eingabeaufforderung (CMD) nutzen.
                 </div>
 
-                <h2>Schritt 2: VS Code installieren</h2>
-                <div class="step">
-                    <strong>Lade es hier herunter:</strong> <a href="https://code.visualstudio.com" target="_blank">code.visualstudio.com</a><br>
-                    Installiere es wie jedes andere Programm.
-                </div>
+                <h2>2. Teste die Installation</h2>
+                <p>Öffne die Eingabeaufforderung (Windows: <kbd>Win + R</kbd> → <code>cmd</code>) und tippe:</p>
 
-                <h2>Schritt 3: Dein erstes Programm</h2>
-                <p>Erstelle eine Datei: <code>hello.py</code></p>
                 <div class="code-block">
-                    <code><span class="code-comment"># Das ist dein erstes Python-Programm!</span><br>
-<span class="code-keyword">print</span>(<span class="code-string">"Hallo, ich lerne Python!"</span>)</code>
+                    <code>python --version</code>
+                </div>
+
+                <div class="example-output">
+                    Python 3.11.5
+                </div>
+
+                <div class="tip">
+                    Funktioniert nicht? → Starte den PC neu oder prüfe „Add to PATH“.
+                </div>
+
+                <h2>3. Editor wählen</h2>
+                <p>Du brauchst einen Ort, um Code zu schreiben. Empfohlen:</p>
+
+                <ul style="margin: 1.5rem 0; padding-left: 1.5rem;">
+                    <li><strong>VS Code</strong> → Kostenlos, beliebt → <a href="https://code.visualstudio.com" target="_blank">Download</a></li>
+                    <li><strong>Thonny</strong> → Für Anfänger → <a href="https://thonny.org" target="_blank">Download</a></li>
+                    <li><strong>Replit</strong> → Online, kein Download → <a href="https://replit.com" target="_blank">replit.com</a></li>
+                </ul>
+
+                <h2>4. Dein erstes Programm</h2>
+                <p>Erstelle eine Datei <code>hallo.py</code> und schreibe:</p>
+
+                <div class="code-block">
+                    <code><span class="code-keyword">print</span>(<span class="code-string">"Hallo Welt!"</span>)</code>
+                </div>
+
+                <p>Führe es aus:</p>
+                <div class="code-block">
+                    <code>python hallo.py</code>
+                </div>
+
+                <div class="example-output">
+                    Hallo Welt!
                 </div>
 
                 <div class="task-box">
                     <strong>Deine Aufgabe:</strong><br>
-                    1. Öffne VS Code<br>
-                    2. Erstelle <code>hello.py</code><br>
-                    3. Schreibe den Code oben rein<br>
-                    4. Drücke <code>Strg + S</code><br>
-                    5. Öffne das Terminal und tippe:<br>
-                    <code>python hello.py</code>
-                </div>
-
-                <div class="example-output">
-                    Hallo, ich lerne Python!
+                    1. Installiere Python<br>
+                    2. Erstelle <code>mein_name.py</code><br>
+                    3. Gib deinen Namen aus
                 </div>
             </div>
 
             <div class="nav-buttons">
-                <a href="index.html" class="nav-btn prev">Zurück zur Startseite</a>
+                <a href="coding-envs.html" class="nav-btn prev">Zurück: Coding Environments</a>
                 <a href="py-print.html" class="nav-btn next">Weiter: Print-Befehl</a>
             </div>
         </div>
@@ -117,7 +130,7 @@
         hamburger.addEventListener('click', () => {
             sidebar.classList.toggle('open');
             hamburger.classList.toggle('open');
-            hamburger.textContent = hamburger.classList.contains('open') ? 'X' : '☰';
+            hamburger.textContent = hamburger.classList.contains('open') ? '✖' : '☰';
         });
     </script>
     <script>
